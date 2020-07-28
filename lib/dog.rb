@@ -23,9 +23,10 @@ class Dog
     print print_list + "\n"
   end
 
-  def self.save(@name)
+  def self.save(name)
     binding.pry
-    @@all << self.instance_variable_get(:@name)
+    @@all << name
+    #@@all << self.instance_variable_get(:@name)
     #@@all << instance_variable_get(@name)
   end
 
