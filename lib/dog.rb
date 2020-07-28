@@ -9,7 +9,7 @@ class Dog
   def initialize(name)
     @name = name
     #@@all << self
-    self.class.save(@name)
+    self.save
     #binding.pry
   end
 
@@ -18,14 +18,14 @@ class Dog
   end
 
   def self.print_all
-    print_list = []
-    print_list = @@all.map(&:name).join("\n")
-    print print_list + "\n"
+    @@all.each do |dog|
+      puts dog.name
+    end
   end
 
-  def self.save(name)
+  def save
     #binding.pry
-    @@all << name
+    @@all << self
     #@@all << self.instance_variable_get(:@name)
     #@@all << instance_variable_get(@name)
   end
