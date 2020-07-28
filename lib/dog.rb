@@ -9,7 +9,7 @@ class Dog
   def initialize(name)
     @name = name
     #@@all << self
-    self.class.save
+    self.save
     binding.pry
   end
 
