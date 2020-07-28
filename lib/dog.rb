@@ -10,6 +10,7 @@ class Dog
     @name = name
     @@all << self
     #self.class.save
+    binding.pry
   end
 
   def self.all
