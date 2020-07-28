@@ -9,7 +9,7 @@ class Dog
   def initialize(name)
     @name = name
     #@@all << self
-    self.class.save
+    self.class.save(@name)
     binding.pry
   end
 
@@ -23,7 +23,7 @@ class Dog
     print print_list + "\n"
   end
 
-  def self.save
+  def self.save(@name)
     binding.pry
     @@all << self.instance_variable_get(:@name)
     #@@all << instance_variable_get(@name)
