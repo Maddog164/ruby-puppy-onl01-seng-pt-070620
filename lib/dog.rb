@@ -23,7 +23,7 @@ class Dog
   end
 
   def self.save
-    @@all << self.@name
+    @@all << self.instance_variable_get(:@name)
   end
 
   def self.clear_all
