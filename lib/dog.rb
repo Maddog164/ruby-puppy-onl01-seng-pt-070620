@@ -24,6 +24,7 @@ class Dog
   end
 
   def self.save
+    binding.pry
     @@all << self.instance_variable_get(:@name)
     #@@all << instance_variable_get(@name)
   end
