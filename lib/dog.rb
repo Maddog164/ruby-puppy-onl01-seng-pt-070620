@@ -10,7 +10,7 @@ class Dog
     @name = name
     #@@all << self
     self.class.save(@name)
-    binding.pry
+    #binding.pry
   end
 
   def self.all
@@ -24,7 +24,7 @@ class Dog
   end
 
   def self.save(name)
-    binding.pry
+    #binding.pry
     @@all << name
     #@@all << self.instance_variable_get(:@name)
     #@@all << instance_variable_get(@name)
